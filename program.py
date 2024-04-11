@@ -26,6 +26,12 @@ translation_map = {
     'ч': 'X', 
     'н': 'Y', 
     'я': 'Z',
+    'ж': ':',
+    '№': '#',
+    'Б': '<',
+    'Ю': '>',
+    'б': ',',
+    'ю': '.',
 }
 
 def translate_text(input_text):
@@ -33,8 +39,10 @@ def translate_text(input_text):
     return translated_text
 
 # Welcome Message 
-print("This code only works with Ossetic Russian Letters/Keyboard.\n")
-print("This code doesn't support big letters/using caps, so write only in little/normal letters.\n")
+print("This code only works with Ossetic Russian Letters.")
+print("This code doesn't support translating UPPER CASE letters.\nAka it will only translate in upper case letters.\n")
+
+# This code cannot replace upper case letters and all, because it will loop otherwise. Tried to test and all and doesn't work, loops and breaks the replacer, making it useless. So yeah ¯\_(ツ)_/¯
 
 # Loop pana cand se inchide programul
 while True:
@@ -51,4 +59,4 @@ while True:
     # Optiune pt a iesi din program 
     exit_command = input("Type 'n' to quit, or press Enter to continue.\n")
     if exit_command.lower() == 'n':
-        break  # Exit the loop if 'n' is entered
+        break  
